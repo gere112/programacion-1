@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Ej3</span>
+        </div>
+      </nav>
+    
+    <div class="container mt-6">
+        <div class="row">
+            <!-- Primera columna Input y Boton -->
+            <div class="col-6">
+                <div class="row">
+
+                    <div class="col-12">
+                        <div class="mb-6">
+                            <label class="form-label" for="">tension</label>
+                            <input id="inp_tension" class="form-control" type="number" placeholder="ingrese tension ">
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-12">
+
+                        <div class="mb-6">
+                            <label class="form-label" for="">corriente</label>
+                            <input id="inp_corriente" class="form-control" type="number" placeholder="ingrese corriente">
+                        </div>
+                        <button onclick="mostrar_respuesta()" class="btn btn-success mt-2">Calcular</button>
+                        <label for=" form-control" type="text"  ></label>
+                    </div>
+
+                
+                </div>
+            </div>
+            <!-- segunda columna Imagen  -->
+            <div class="col-lg-6">
+                <img src="perrobife.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <script src="java.js"></script>
+</body>
+</html>
