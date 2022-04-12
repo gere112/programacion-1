@@ -12,7 +12,7 @@ const calcular_raices=(d1,d2,d3) => {
  
     const resultado2= raiz2 / denominador
 
-    return 'raiz1= '+ resultado1 +' raiz2=' + resultado2
+    return ' raiz1= ' + resultado1 + ' raiz2= ' + resultado2
 
 }
 const  mostrar = () => {
@@ -22,7 +22,7 @@ const dato3= parseInt( document.getElementById("inp_dato3").value) //c
 
   const respuesta= calcular_raices(dato1,dato2,dato3)
 
-   document.getElementById("Resultado_H1").textContent = 'Resultado Raiz: '+ respuesta
+   document.getElementById("Resultado_H1").textContent = ' Resultado Raiz:    '+ respuesta
 }
 const boton=document.getElementById("mostrar_respuesta") 
 
