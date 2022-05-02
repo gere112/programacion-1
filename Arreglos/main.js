@@ -13,7 +13,7 @@ console.log(`
 let ultimo_elemento = helados [helados.length-1]
 console.log(`
         Ultimo elemento: ${ultimo_elemento}
-`)
+        `)
 
 //recorrer un arreglo haciendo uso de foreach
                 //argumento
