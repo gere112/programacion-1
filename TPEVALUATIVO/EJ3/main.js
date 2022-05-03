@@ -1,23 +1,18 @@
-const calcular_raices=(ra,rb) => {
+function calcular_raices() {
 
-    const a = math.pow(ra,2)
-    const b= math.pow(rb,2)
-    const c= math.sqrt(parseInt(a+b))
+    const raiz_a = parseInt(document.getElementById("raiz_a").value) //a
+    const raiz_b = parseInt(document.getElementById("raiz_b").value) //b
 
-    return 'c'
+    const respuesta_a = parseFloat(Math.pow(raiz_a, 2))
+    const respuesta_b = parseFloat(Math.pow(raiz_b, 2))
+    const resultado = parseFloat(Math.sqrt(parseInt(respuesta_a + respuesta_b)))
+
+    return resultado
 }
-function mostrar() {
-    const ra = parseInt(document.getElementById("raiz_a").value) //a
-    const rb = parseInt(document.getElementById("raiz_b").value) //b
 
 
-    const respuesta = calcular_raices(ra, rb)
+function mostrar_respuesta() {
+    const respuesta = calcular_raices()
 
-    document.getElementById("Resultado_H1").textContent = ' Resultado Raiz:    ' + respuesta
+    document.getElementById("h4").textContent =  respuesta
 }
-const boton=document.getElementById("mostrar_respuesta") 
-
-   
-   //indicamos elemento a escuchar (en este click)
-   //entonces cuando se haga click se invocara a la funcion mostrar 
-   boton.addEventListener("click", mostrar)

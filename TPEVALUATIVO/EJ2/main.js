@@ -1,32 +1,43 @@
 
-const mostrar = () => {
-    //asignacion 
-    const Grados = document.getElementById("Grados_Fahrenheit").value
+const mostrar = (F) => {
 
+    //Defino variable como nula para poder obtener el resultado
+    let mensaje = null
 
-    if (Grados >= 14 && Grados <= 32) {
-        alert("Temperatura Baja")
+    
+    if (F >= 14 && F <= 32) {
+        mensaje = 'Temperatura Baja'
 
     } else {
-        if (Grados >= 32 && Grados <= 68) {
-            alert("Temperatura Adecuada")
+        if (F >= 33 && F <= 68) {
+            mensaje = 'Temperatura Adecuada'
 
         } else {
-            if (Grados >= 68 && Grados <= 96) {
-                alert("Temperatura Alta")
+            if (F >= 69 && F <= 96) {
+                mensaje = 'Temperatura Alta'
 
-            }else{
-                alert("Temperatura Desconocida ")
+            } else {
+                mensaje = 'Temperatura Desconocida'
             }
         }
     }
 
+    return mensaje
+}
+    //defino constante para enviar y recibir los datos a la funcion flecha mostrar
+const Resultado = () => {
+    const Fahrenheit = parseInt(document.getElementById("Fahrenheit").value)
+
+    const respuesta = mostrar(Fahrenheit)
+    
+    //obtengo el elemento del boton
+    document.getElementById("h_titulo").textContent = 'Conversion:' + respuesta
+}
+//obtengo boton desde el index
+const boton = document.getElementById("btn_mostrar")
 
 
+//indicamos elemento a escuchar (en este click)
+//entonces cuando se haga click se invocara a la funcion mostrar 
+boton.addEventListener("click", Resultado)
 
-    //obtengo  el elemento boton
-    const boton = document.getElementById("btn_mostrar")
-
-    //indicamos elemento a escuchar (en este click)
-    //entonces cuando se haga click se invocara a la funcion mostrar 
-    boton.addEventListener("click", mostrar)
