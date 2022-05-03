@@ -47,7 +47,7 @@ console.log (`
         Posicion del elemento Banana Split= ${indice}
 `)
 
-////ELIMINAR un elemento segun su indice
+////ELIMINAR UN elemento segun su indice
 //indice lo declare como let en el punto anterior
 helados.splice(indice,1)
 console.log(helados)
