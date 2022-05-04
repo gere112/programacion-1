@@ -8,17 +8,33 @@
     <title>Arreglos</title>
     <link rel="stylesheet" href="bootstrap.min.css">
 
-    
+
 </head>
 
 <body>
 
     <div class="container">
 
-        <button onclick="mostrar_respuesta()" class="btn btn-success mt-2">Obtener array</button>
-        <label for=" form-control" type="text"></label>
-
+        <div class="row">
+            <div class="col ">
+                <button onclick="op()" class="btn btn-primary mt-3">Longitud del Arreglo</button>
+                <p id="resultado"></p>
+                <p id="ultimo_elemento"></p>
+                <p id="tercer_elemento"></p>
+            </div>
+        </div>
     </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            <button onclick="mostrar_respuesta()" class="btn btn-success mt-3">Obtener array</button>
+            <label for=" form-control" type="text"></label>
+            </div>
+        </div>
+    </div>
+
 
 
     <script src="main.js"></script>

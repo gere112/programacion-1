@@ -9,18 +9,23 @@ c) El tercer elemento del arreglo*/
 function op() {
 
     //la longitud del arreglo
-    console.log(` 
-    Longitud = ${lenguajes.length} //7
+    document.getElementById("resultado").textContent= (` 
+    Longitud = ${lenguajes.length}
 `)
     //el ultimo elemento del arreglo
-        let ultimo_elemento = lenguajes[lenguajes.length - 1]
-        console.log(`
-            Ultimo elemento: ${ultimo_elemento}
-             `)
+
+    let ultimo_elemento = lenguajes.length - 1
+    document.getElementById("ultimo_elemento").textContent=(` 
+
+    ultimo_elemento = ${lenguajes[ultimo_elemento]}
+
+    `)
 
     //El tercer elemento del arreglo
-        const leng =lenguajes[2] // posicion 0,1,2 ||argumento 1,2,3
-            console.log(leng)
+        document.getElementById("tercer_elemento").textContent= (`
+        tercer_elemento = ${lenguajes[2]} 
+                `)
+
 }   
 
 /*2. Crear una función que recorra el arreglo y lo imprima en un console.log(). Hacer uso de
