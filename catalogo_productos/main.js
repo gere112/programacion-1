@@ -23,7 +23,6 @@ async function obtener_producto(category){
                     <button type="button" class="btn btn-primary" data-bs-target="#collapse" aria-controls="collapse" aria-expanded="false">Description</button>
 
                     <p class="card-text collapse" id="collapse">Description: ${productos.description}</p>
-                
             </div>
         </div>
     </div>
