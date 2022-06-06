@@ -4,7 +4,8 @@ const consumir_datos=async () =>{
 
     const datos = await dato_recibidos.json()
     let lista_usuario =[]
-    datos.forEach(usuario => {
+    
+    datos.forEach((usuario,index) => {
         let fila =`
 
         <tr>
@@ -13,6 +14,8 @@ const consumir_datos=async () =>{
         <td>${usuario.website}</td>                
         </tr>
         `
+
+
         lista_usuario.push(fila)
         
     });
