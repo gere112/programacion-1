@@ -39,11 +39,6 @@ const boton =document.getElementById("btn_ejecutar")
 boton.addEventListener("click",info_array)   
 
 
-
-
-
-
-
 //5  recorrer el array y mostrar elementos en una tabla
 let filas = []
 const tabla_array=() =>{
@@ -67,7 +62,17 @@ const tabla_array=() =>{
             
 }
 
+//boton para mostrar la tabla
+
 const boton1 =document.getElementById("ejecutar_tabla")
 
 boton1.addEventListener("click",tabla_array)   
 
+
+
+
+
+ 
+//las API son interfaces compuestas por reglas y llamados en lenguaje computacional
+//, que sirven para programar el funcionamiento de una aplicación determinada dentro
+ //de un software
