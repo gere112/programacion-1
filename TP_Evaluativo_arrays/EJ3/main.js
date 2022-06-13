@@ -12,10 +12,12 @@ const framework = {
 
 
    const objetos =() =>{
-       //propiedades del objeto
-    console.log(framework.titulo)
-    console.log(framework.nombre)
+    
 
+    const { titulo, nombre } = framework
+   //propiedades del objeto
+   console.log(titulo)
+   console.log(nombre)
 
     //Destructuring Object
     const { lenguaje, patron, spa } =framework.características;

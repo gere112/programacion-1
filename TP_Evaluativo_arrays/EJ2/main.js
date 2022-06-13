@@ -49,7 +49,7 @@ const imprimir_ListGroup=() =>{
         Cripto.forEach( (element) => {
 
                 let fila = `
-                                <li>${element}</li>
+                                <li class="list-group-item">${element}</li>
                 `
 
                 filas.push(fila)
