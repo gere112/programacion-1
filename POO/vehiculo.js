@@ -9,7 +9,7 @@ export default class Vehiculo{
     
 
             //primer metodo de la clase que son reservados de esta misma , es decir propios
-            // se ejecuta cunado se crea la instancia ,es decir auto=new vehiculo
+            // se ejecuta cuando se crea la instancia ,es decir auto=new vehiculo
             //recibe parametros
             constructor(m,k){
                 this.marca = m
