@@ -36,6 +36,7 @@ export default class Cliente {
       //actualiza automaticamente los datos de la tabla
       //invocamos al metodo obtener clientes
       this.obtener_clientes()
+      this.vaciar_formulario()
    }
 
    obtener_clientes() {
