@@ -34,5 +34,8 @@ import Cliente from "./cliente.js";
 
         let index= localStorage.getItem("indice_update")
         let cliente= new Cliente()
-        cliente.actualizar_cliente()
+        cliente.actualizar_cliente(index)
     }
+    document.getElementById("btn_actualizar").addEventListener("click", actualizar)
+
+    
