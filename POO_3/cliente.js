@@ -84,10 +84,14 @@ export default class Cliente {
       //volvemos a reconstruir la tabla 
       this.obtener_clientes()
 
+
+      //borra el formulario de actualizar ,desactivando el boton actualizar tambien y activa el boton guardar
       document.getElementById("btn_guardar").style.display = "block"
       document.getElementById("btn_actualizar").style.display = "none"
 
       this.vaciar_formulario()
+
+
    }
 
 

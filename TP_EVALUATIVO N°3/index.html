@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand "  style="color: rgb(121, 121, 121);" href="#">Registro</a>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+
+        <div class="row">
+
+            <div class="col-lg-4">
+                    <h1>Carga de Producto</h1>
+                    <form id="form_cliente" >
+
+        
+                        <div class="mb-3">
+                            <label for="form-label">Descripción</label>
+                            <input id="inp_descripcion" class="form-control" type="text" placeholder="Nombre del producto" autocomplete="off">
+                        </div>
+        
+                        <div class="mb-3">
+                            <label for="form-label">Precio</label>
+                            <input id="inp_precio" class="form-control" type="number" placeholder="Precio">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="form-control">URL Imagen Producto</label>
+                            <input id="inp_url_img" class="form-control" type="text" placeholder="Imagen con URL">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="form-label">Detalle</label>
+                            <input id="inp_detalle" class="form-control" type="text" placeholder="Unidad de medida o cantidad">
+                        </div>
+                    </form>
+
+
+                    
+
+
+                <button id="btn_guardar" class="btn btn-secondary" >Guardar</button>
+                <button style="display: none;" id="btn_actualizar" class="btn btn-dark">actualizar</button>
+            </div>
+
+            <div class="col-lg-8">
+
+                <table class="table table-dark table-striped table-sm text-center">
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Imagen</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Detalle</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+              
+
+                <!-- Modal -->
+                <div class="modal fade" id="mymodal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Eliminacion</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>¿Estas seguro de eliminar este Producto?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button id="btn_eliminar" type="button" class="btn btn-danger">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="main.js" type="module"></script>
+    <script src="auxiliar.js"></script>
+</body>
+
+</html>

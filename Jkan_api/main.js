@@ -23,10 +23,9 @@ const consumir_anime = async () => {
 </div>
 
 `
-lista_anime.push(columna)
-
+        lista_anime.push(columna)
 
     });
-    document.getElementById("cards_anime").innerHTML =lista_anime.join('')
+    document.getElementById("cards_anime").innerHTML = lista_anime.join('')
 }
 consumir_anime()

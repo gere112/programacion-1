@@ -1,7 +1,7 @@
 async function obtener_producto(category){
 
 
-    const productos = await fetch('https://fakestoreapi.com/products/category/'+category)
+    const productos = await fetch('https://fakestoreapi.com/products/categories/'+category)
 
     const datos_productos = await productos.json()
 
@@ -35,5 +35,5 @@ async function obtener_producto(category){
     document.getElementById("cards_fake_store").innerHTML = lista_productos.join('')
 }
 
-obtener_productos()
+obtener_producto()
 
