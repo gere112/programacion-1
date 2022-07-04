@@ -1,4 +1,4 @@
-export default class Cliente {
+export default class Producto {
 
    constructor(des, url, pre ,det) {
       this.descripcion = des
@@ -7,10 +7,13 @@ export default class Cliente {
       this.detalle =det
    }
 
-   //metodo
-   guardar_cliente() {
+   
 
-      //Crear objeto
+   //metodo
+   guardar_producto() {
+
+      
+      //Crear objeto    
       let nuevo_producto = {
          descripcion: this.descripcion,
          url_img: this.url_img,
@@ -37,12 +40,12 @@ export default class Cliente {
          localStorage.setItem("listado_productos", JSON.stringify(lista_productos))
       }
       //actualiza automaticamente los datos de la tabla
-      //invocamos al metodo obtener clientes
-      this.obtener_clientes()
+      //invocamos al metodo obtener productos
+      this.obtener_productos()
       this.vaciar_formulario()
    }
 
-   obtener_clientes() {
+   obtener_productos() {
       let listado_productos = JSON.parse(localStorage.getItem("listado_productos"))
 
       let filas = []
@@ -65,19 +68,19 @@ export default class Cliente {
       document.getElementById("tbody").innerHTML = filas.join("")
    } lle
 
-   eliminar_cliente(index) {
+   eliminar_producto(index) {
       let lista_producto = JSON.parse(localStorage.getItem("listado_productos"))
 
-      //eliminamos clientes
+      //eliminamos productos
       lista_producto.splice(index, 1)
 
       localStorage.setItem("listado_productos", JSON.stringify(lista_producto))
 
-      this.obtener_clientes()
+      this.obtener_productos()
    }
 
-   actualizar_cliente(index) {
-      //fui a buscar el listado de clientes al storage
+   actualizar_producto(index) {
+      //fui a buscar el listado de productos al storage
       let listado_productos = JSON.parse(localStorage.getItem("listado_productos"))
 
       listado_productos[index].descripcion = document.getElementById("inp_descripcion").value
@@ -87,7 +90,7 @@ export default class Cliente {
 
       localStorage.setItem("listado_productos", JSON.stringify(listado_productos))
       //volvemos a reconstruir la tabla 
-      this.obtener_clientes()
+      this.obtener_productos()
 
 
       //borra el formulario de actualizar ,desactivando el boton actualizar tambien y activa el boton guardar
@@ -102,7 +105,7 @@ export default class Cliente {
 
    vaciar_formulario() {
 
-      document.getElementById("form_cliente").reset()
+      document.getElementById("form_producto").reset()
    }
 }
 

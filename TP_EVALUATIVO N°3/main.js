@@ -1,4 +1,4 @@
-import Cliente from "./cliente.js"; 
+import Producto from "./producto.js"; 
 
     //dentro de esta crear la instancia 
     function guardar() {
@@ -8,23 +8,23 @@ import Cliente from "./cliente.js";
         let precio = document.getElementById("inp_precio").value
         let detalle = document.getElementById("inp_detalle")
         //instancia de la clase
-        let cliente= new Cliente(descripcion,url_img,precio ,detalle)
-        cliente.guardar_cliente()
+        let producto= new Producto(descripcion,url_img,precio ,detalle)
+        producto.guardar_producto()
     }
 
     document.getElementById("btn_guardar").addEventListener("click",guardar)
 
     function listar(){
-        let cliente = new Cliente()
-        cliente.obtener_clientes()
+        let producto = new Producto()
+        producto.obtener_productos()
     }
 
     listar()
 
     function eliminar(){
         let indice =localStorage.getItem("indice")
-        let cliente= new Cliente
-        cliente.eliminar_cliente(indice)
+        let producto= new Producto
+        producto.eliminar_producto(indice)
         
 
     }
@@ -34,8 +34,8 @@ import Cliente from "./cliente.js";
     function actualizar(){
 
         let index= localStorage.getItem("indice_update")
-        let cliente= new Cliente()
-        cliente.actualizar_cliente(index)
+        let producto= new Producto()
+        producto.actualizar_producto(index)
     }
     document.getElementById("btn_actualizar").addEventListener("click", actualizar)
 
